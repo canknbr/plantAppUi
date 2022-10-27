@@ -66,7 +66,10 @@ const HomeScreen = () => {
       </View>
       <CategoryList />
       <FlatList
+        columnWrapperStyle={{justifyContent: 'space-between'}}
         data={plants}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{marginTop: 20, paddingBottom: 50}}
         numColumns={2}
         keyExtractor={item => item.id}
         renderItem={({item}) => <Plant plant={item} />}
